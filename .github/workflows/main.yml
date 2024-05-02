@@ -1,0 +1,5 @@
+            - name: render-md-mermaid
+  # You may pin to the exact commit or the version.
+  # uses: nielsvaneck/render-md-mermaid@3ab9efe2cd2e33157c2b2dcc34f1eb16accb29c9
+  uses: nielsvaneck/render-md-mermaid@v3
+          
