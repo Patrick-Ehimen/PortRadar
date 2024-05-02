@@ -1,0 +1,24 @@
+            - name: JS & TS Solidity Unit Tests Action
+  # You may pin to the exact commit or the version.
+  # uses: EthereumRemix/ts-sol-test@03ee935c61469700321715549a619de824eb5bbd
+  uses: EthereumRemix/ts-sol-test@v1.4.0
+  with:
+    # Path to file or directory containing all test files
+    test-path: 
+    # Path to file or directory containing all solidity smart contracts
+    contract-path: 
+    # set compiler version (e.g: 0.6.1, 0.7.1 etc)
+    compiler-version: # optional
+    # set evm version (e.g: istanbul, berlin etc)
+    evm-version: # optional
+    # set optimize (e.g: true, false)
+    optimize: # optional, default is false
+    # set optimizer runs (e.g: 200)
+    optimizer-runs: # optional, default is 0
+    # set node url (e.g: https://mainnet.infura.io/v3/your-api-key)
+    node-url: # optional
+    # set block number (e.g: 123456)
+    block-number: # optional, default is latest
+    # set hard fork (e.g: istanbul, berlin etc. See full list of hard forks here: https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/common/src/hardforks)
+    hard-fork: # optional
+          
