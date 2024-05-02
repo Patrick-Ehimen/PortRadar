@@ -1,4 +1,4 @@
-![rendered image description](./images/dapp_architecture.png)
+![rendered image description](./images/dapp_architecture.svg)
 
 <details>
   <summary>diagram source</summary>
