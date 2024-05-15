@@ -1,56 +1,29 @@
-import { DonutChart, Legend } from "@tremor/react";
+import React from "react";
+import { Doughnut } from "react-chartjs-2";
 
-const sales = [
-  {
-    name: "New York",
-    sales: 980,
-  },
-  {
-    name: "London",
-    sales: 456,
-  },
-  {
-    name: "Hong Kong",
-    sales: 390,
-  },
-  {
-    name: "San Francisco",
-    sales: 240,
-  },
-  {
-    name: "Singapore",
-    sales: 190,
-  },
-];
+interface Data {
+  labels: string[];
+  datasets: {
+    data: number[];
+    backgroundColor: string[];
+  };
+}
 
-const valueFormatter = (number: number) =>
-  `$ ${Intl.NumberFormat("us").format(number).toString()}`;
+const WalletChartBalance: React.FC = () => {
+  const data: Data = {
+    labels: ["Bitcoin", "Ethereum", "Ripple"],
+    datasets: [
+      {
+        data: [1200, 700, 300],
+        backgroundColor: ["#f87979", "#7C4DFF", "#00C49F"],
+      },
+    ],
+  };
 
-const WalletChartBalance = () => {
   return (
-    <>
-      <div className="flex items-center justify-center space-x-6">
-        <DonutChart
-          data={sales}
-          category="sales"
-          index="name"
-          valueFormatter={valueFormatter}
-          colors={["blue", "cyan", "indigo", "violet", "fuchsia"]}
-          className="w-40"
-        />
-        <Legend
-          categories={[
-            "New York",
-            "London",
-            "Hong Kong",
-            "San Francisco",
-            "Singapore",
-          ]}
-          colors={["blue", "cyan", "indigo", "violet", "fuchsia"]}
-          className="max-w-xs"
-        />
-      </div>
-    </>
+    <div>
+      <Doughnut data={data} />
+    </div>
   );
 };
 
