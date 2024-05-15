@@ -2,7 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 
 import { Navbar, Footer } from "./components";
 import {
-  DefiEcosystem,
+  DeFiEcosystem,
   Blog,
   BuyCrypto,
   Faq,
@@ -10,7 +10,7 @@ import {
   Home,
 } from "./pages";
 
-export default function App() {
+const App = () => {
   const location = useLocation();
   const isDashboard = location.pathname === "/app-dashboard";
 
@@ -20,7 +20,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/defi-ecosystem" element={<DefiEcosystem />} />
+        <Route path="/defi-ecosystem" element={<DeFiEcosystem />} />
         <Route path="/buy-crypto" element={<BuyCrypto />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />
@@ -30,4 +30,6 @@ export default function App() {
       {!isDashboard && <Footer />}
     </div>
   );
-}
+};
+
+export default App;
